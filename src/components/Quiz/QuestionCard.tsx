@@ -73,7 +73,7 @@ export const QuestionCard = ({
             onClick={() => onAnswerSelect(index)}
             disabled={showFeedback}
             className={cn(
-              'w-full text-left justify-start p-4 h-auto min-h-12 transition-smooth',
+              'w-full text-left justify-start p-4 h-auto min-h-12 transition-smooth whitespace-normal',
               getAnswerButtonClasses(index)
             )}
           >
