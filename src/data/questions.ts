@@ -4,7 +4,7 @@ export interface Question {
   options: string[];
   correctAnswer: number;
   explanation: string;
-  topic: 'Ecology Basics' | 'Life History' | 'Population' | 'Scientific Method';
+  topic: 'Ecology Basics' | 'Life History' | 'Population' | 'Scientific Method' | 'Conservation Biology';
 }
 
 export const questionBank: Question[] = [
@@ -565,6 +565,136 @@ export const questionBank: Question[] = [
     correctAnswer: 2,
     explanation: "Hutchinson's niche theory describes a multidimensional space of environmental requirements, called a \"hypervolume.\"",
     topic: "Ecology Basics"
+  },
+  {
+    id: 52,
+    question: "Which process reduces genetic diversity in small populations by randomly removing alleles?",
+    options: [
+      "Gene flow",
+      "Genetic drift", 
+      "Mutation",
+      "Natural selection"
+    ],
+    correctAnswer: 1,
+    explanation: "Genetic drift is the random loss of alleles, which is especially impactful in small populations.",
+    topic: "Conservation Biology"
+  },
+  {
+    id: 53,
+    question: "What is inbreeding depression?",
+    options: [
+      "Increase in population growth",
+      "Reduced survival from mating between relatives",
+      "More features in hybrids", 
+      "Better adaptation to environment"
+    ],
+    correctAnswer: 1,
+    explanation: "Inbreeding depression results from relatives mating, which increases harmful genetic effects and lowers fitness.",
+    topic: "Conservation Biology"
+  },
+  {
+    id: 54,
+    question: "Which formula best describes effective population size (Ne) when given the number of breeding males (Nm) and females (Nf)?",
+    options: [
+      "Ne = Nm + Nf",
+      "Ne = Nm × Nf",
+      "Ne = 4NmNf / (Nm + Nf)",
+      "Ne = (Nm - Nf)²"
+    ],
+    correctAnswer: 2,
+    explanation: "The correct formula is Ne = 4NmNf / (Nm + Nf), representing the number contributing genes to the next generation.",
+    topic: "Conservation Biology"
+  },
+  {
+    id: 55,
+    question: "What is a metapopulation?",
+    options: [
+      "One large isolated population",
+      "Group of populations linked by dispersal",
+      "Population with no gene flow",
+      "Genetic clone populations"
+    ],
+    correctAnswer: 1,
+    explanation: "A metapopulation consists of multiple populations connected by occasional dispersal between them.",
+    topic: "Conservation Biology"
+  },
+  {
+    id: 56,
+    question: "In the source-sink model, what defines a \"source\" population?",
+    options: [
+      "Mortality exceeds reproduction",
+      "Reproduction exceeds mortality", 
+      "Population has no emigration",
+      "Population cannot persist"
+    ],
+    correctAnswer: 1,
+    explanation: "A source population has higher birth than death rates, supplying individuals to other areas through dispersal.",
+    topic: "Conservation Biology"
+  },
+  {
+    id: 57,
+    question: "Which is NOT a major driver of modern biodiversity loss mentioned in conservation biology?",
+    options: [
+      "Habitat loss",
+      "Overharvesting", 
+      "Habitat restoration",
+      "Climate change"
+    ],
+    correctAnswer: 2,
+    explanation: "The five major drivers are habitat loss, overharvesting, introduced species, pollution, and climate change; habitat restoration is a conservation effort, not a threat.",
+    topic: "Conservation Biology"
+  },
+  {
+    id: 58,
+    question: "Why is the loss of genetic diversity in cheetahs concerning for conservation?",
+    options: [
+      "It makes them faster",
+      "Increases disease vulnerability and lowers adaptability",
+      "Increases population size",
+      "Decreases their need for territory"
+    ],
+    correctAnswer: 1,
+    explanation: "Low genetic diversity can make cheetahs more susceptible to disease and less able to adapt to new threats.",
+    topic: "Conservation Biology"
+  },
+  {
+    id: 59,
+    question: "Why is effective population size often lower than the actual number of individuals?",
+    options: [
+      "Not all individuals breed",
+      "Immigration is high",
+      "Mutation rates are high", 
+      "There is no competition"
+    ],
+    correctAnswer: 0,
+    explanation: "Effective population size counts only individuals who contribute genes; in many populations, some do not breed.",
+    topic: "Conservation Biology"
+  },
+  {
+    id: 60,
+    question: "What is the sixth mass extinction?",
+    options: [
+      "An event in the distant past",
+      "A potential current extinction crisis driven by human activity",
+      "A myth",
+      "Caused entirely by meteors"
+    ],
+    correctAnswer: 1,
+    explanation: "The \"sixth mass extinction\" refers to the present, rapid increase in extinctions, primarily caused by human activity.",
+    topic: "Conservation Biology"
+  },
+  {
+    id: 61,
+    question: "What is one reason to conserve biodiversity mentioned in conservation biology?",
+    options: [
+      "It slows down ecosystem processes",
+      "It reduces genetic diversity",
+      "Many pharmaceuticals come from wild species",
+      "It makes species easier to control"
+    ],
+    correctAnswer: 2,
+    explanation: "Many medicines, such as anti-cancer drugs, are derived from naturally occurring substances in wild species like the rosy periwinkle.",
+    topic: "Conservation Biology"
   }
 ];
 
@@ -579,4 +709,4 @@ export const getQuestionsByTopic = (topic: Question['topic']): Question[] => {
   return questionBank.filter(q => q.topic === topic);
 };
 
-export const topics = ['Ecology Basics', 'Life History', 'Population', 'Scientific Method'] as const;
+export const topics = ['Ecology Basics', 'Life History', 'Population', 'Scientific Method', 'Conservation Biology'] as const;
